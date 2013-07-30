@@ -5,7 +5,8 @@ module.exports = function(grunt) {
             files: ['test/index.html']
         }
     });
-
+    
+    grunt.registerTask('qunit', function(){console.log ('HEllo WorLD!!');})
     // Task to run tests
     grunt.registerTask('test', 'qunit');
     
