@@ -6,9 +6,16 @@ module.exports = function(grunt) {
         }
     });
     
-    grunt.registerTask('qunit', function(){console.log ('HEllo WorLD!!');})
-    // Task to run tests
-    grunt.registerTask('test', 'qunit');
+    grunt.loadNpmTasks('grunt-contrib-qunit');
+    //grunt.registerTask('qunit', function(){console.log ('HEllo WorLD!!');})
     
-    grunt.registerTask('build',['test']);
+    grunt.registerTask('build');
+    
+    // Testing tasks
+    grunt.registerTask('test', ['build', 'qunit']);
+
+    // Travis CI task.
+    grunt.registerTask('travis', 'test');
+
+    grunt.registerTask('default', ['build', 'qunit']);
 };
