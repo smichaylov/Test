@@ -1,9 +1,9 @@
 module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
-        //qunit: {
-        //    files: ['test/index.html']
-        //},
+        qunit: {
+            files: ['test/index.html']
+        },
 		jasmine: {
 			tennis: {
 			  src: 'test/tennis_kata/src/*.js',
@@ -17,11 +17,10 @@ module.exports = function(grunt) {
     
     grunt.loadNpmTasks('grunt-contrib-qunit');
 	grunt.loadNpmTasks('grunt-contrib-jasmine');
-    //grunt.registerTask('qunit', function(){console.log ('HEllo WorLD!!');})
     
-    grunt.registerTask('build',function(){console.log ('HEllo WorLD!!');});
+    grunt.registerTask('build', function(){console.log ('Running a stub function for build tasks!');});
     
     // Travis CI task.
-    grunt.registerTask('travis', 'jasmine');
+    grunt.registerTask('travis', ['qunit', 'jasmine']);
 
 };
