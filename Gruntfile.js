@@ -3,7 +3,16 @@ module.exports = function(grunt) {
     grunt.initConfig({
         qunit: {
             files: ['test/index.html']
-        }
+        },
+		jasmine: {
+			tennis: {
+			  src: 'test/tennis_kata/src/*.js',
+			  options: {
+				specs: 'test/tennis_kata/spec/*Spec.js',
+				helpers: 'test/tennis_kata/spec/*Helper.js'
+			  }
+			}
+		}
     });
     
     grunt.loadNpmTasks('grunt-contrib-qunit');
