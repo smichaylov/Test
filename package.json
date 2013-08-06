@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "grunt": "~0.4.0",
-    "grunt-contrib-qunit": "~0.2.0"
+    "grunt-contrib-qunit": "~0.2.0",
+	"grunt-contrib-jasmine": "~0.5.1"
   }
 }
