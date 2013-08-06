@@ -21,11 +21,7 @@ module.exports = function(grunt) {
     
     grunt.registerTask('build',function(){console.log ('HEllo WorLD!!');});
     
-    // Testing tasks
-    grunt.registerTask('test', ['build', 'qunit']);
-
     // Travis CI task.
-    grunt.registerTask('travis', 'test');
+    grunt.registerTask('travis', 'jasmine');
 
-    grunt.registerTask('default', ['build', 'qunit']);
 };
