@@ -1,9 +1,9 @@
 module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
-        qunit: {
-            files: ['test/index.html']
-        },
+        //qunit: {
+        //    files: ['test/index.html']
+        //},
 		jasmine: {
 			tennis: {
 			  src: 'test/tennis_kata/src/*.js',
