@@ -46,22 +46,16 @@ test("should have score of 15 after winning a point", function ( assert ) {
     });
     
     test("should have score of 30 after winning 2 points", function ( assert ) {
-        player.winPoint();
-        player.winPoint();
+        _(2).times(player.winPoint());
         assert.equal(player.score,30);
     });
     
     test("should have score of 40 after winning 3 points", function ( assert ) {
-        player.winPoint();
-        player.winPoint();
-        player.winPoint();
+        _(3).times(player.winPoint());
         assert.equal(player.score,40);
     });
     
     test("should be the winner after winning 4 points", function () {
-        player.winPoint();
-        player.winPoint();
-        player.winPoint();
-        player.winPoint();
+        _(4).times(player.winPoint());
         ok(player.hasWon);
     });
