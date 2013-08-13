@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         qunit: {
-            urls: ['test/index.html']
+            files: ['test/index.html']
         },
 		jasmine: {
 			tennis: {
